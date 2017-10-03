@@ -14,8 +14,7 @@ class Triangle
       rescue TriangleError => error
         puts error.message
       end
-    end
-    if @length_1 + @length_2 <= @length_3 || @length_1 + @length_3 <= @length_2 || @length_2 + @length_3 <= @length_1
+    elsif @length_1 + @length_2 <= @length_3 || @length_1 + @length_3 <= @length_2 || @length_2 + @length_3 <= @length_1
       begin
         raise TriangleError
       rescue TriangleError => error
