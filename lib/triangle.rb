@@ -8,14 +8,19 @@ class Triangle
   end
 
   def kind
-    if !(@length_1 > 0 && @length_2 > 0 && @length_3 > 0) || !(@length_1 + @length_2 > @length_3 || @length_1 + @length_3 > @length_2 || @length_2 + @length_3 > @length_1)
+    if @length_1 == 0 && @length_2 == 0 && @length_3 == 0) 
       begin
         raise TriangleError
       rescue TriangleError => error
         puts error.message
       end
-    end
-    if @length_1 == @length_2 && @length_1 == @length_3
+    elsif @length_1 + @length_2 <= @length_3 || @length_1 + @length_3 <= @length_2 || @length_2 + @length_3 <= @length_1
+      begin
+        raise TriangleError
+      rescue TriangleError => error
+        puts error.message
+      end
+    elsif @length_1 == @length_2 && @length_1 == @length_3
       :equilateral
     elsif @length_1 == @length_2 || @length_1 == @length_3 || @length_2 == @length_3
       :isosceles
