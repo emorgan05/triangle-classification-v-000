@@ -36,4 +36,7 @@ class TriangleError < StandardError
   end
 end
 
+a = Triangle.new(2, 2, 2).kind
+b = Triangle.new(3, 4, 4).kind
+c = Triangle.new(10, 11, 12).kind
 t = Triangle.new(2, 4, 2).kind
