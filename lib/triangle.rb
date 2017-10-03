@@ -8,7 +8,7 @@ class Triangle
   end
 
   def kind
-    if @length_1 !> 0
+    if !@length_1 > 0
     begin
       raise TriangleError
     rescue TriangleError => error
