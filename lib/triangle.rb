@@ -13,6 +13,7 @@ class Triangle
         raise TriangleError
       rescue TriangleError => error
         puts error.message
+      end
     end
     if @length_1 == @length_2 && @length_1 == @length_3
       :equilateral
