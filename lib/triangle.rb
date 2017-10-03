@@ -8,6 +8,12 @@ class Triangle
   end
 
   def kind
+    if @length_1 !> 0
+    begin
+      raise TriangleError
+    rescue TriangleError => error
+      puts error.message
+    end
     if @length_1 == @length_2 && @length_1 == @length_3
       :equilateral
     elsif @length_1 == @length_2 || @length_1 == @length_3
@@ -19,4 +25,7 @@ class Triangle
 end
 
 class TriangleError < StandardError
+  def message
+    "Your Triangle is illegal!"
+  end
 end
