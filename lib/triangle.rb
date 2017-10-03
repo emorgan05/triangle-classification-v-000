@@ -8,6 +8,7 @@ class Triangle
   end
 
   def kind
+    require 'pry'
     binding.pry
     if @length_1 == 0 && @length_2 == 0 && @length_3 == 0
         raise TriangleError
