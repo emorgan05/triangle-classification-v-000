@@ -35,3 +35,5 @@ class TriangleError < StandardError
     "Your Triangle is illegal!"
   end
 end
+
+t = Triangle.new(2, 4, 2).kind
